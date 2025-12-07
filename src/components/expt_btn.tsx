@@ -1,11 +1,17 @@
-import { FiDownloadCloud } from "react-icons/fi";
 import "../Style/expt_btn.css"
 
-export const ExptBtn: React.FC = () => {
+interface ExptBtnProps {
+  onClick?: () => void;
+  icon?: React.ReactNode;
+  label?: string;
+}
+
+export const ExptBtn: React.FC<ExptBtnProps> = ({ onClick, icon, label }) => {
+
   return (
-    <div className="expt__btn">
-        <FiDownloadCloud />
-      <p>Export</p>
+    <div className="expt__btn" onClick={onClick}>
+      {icon}
+      <p>{label}</p>
     </div>
   );
 };

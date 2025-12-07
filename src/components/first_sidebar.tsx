@@ -1,19 +1,17 @@
-import { useState } from 'react';
 import CtnDash from './ctn__dash';
 import LstSide from './lst__side';
 import "../Style/fst_side.css"
 
-function FirstSidebar() {
-    const [isCtnDashVisible, setIsCtnDashVisible] = useState(true);
+interface FirstSidebarProps {
+    isCtnDashVisible: boolean;
+    onToggle: () => void;
+}
 
-    const toggleCtnDash = () => {
-        setIsCtnDashVisible(!isCtnDashVisible);
-    };
-
+function FirstSidebar({ isCtnDashVisible, onToggle }: FirstSidebarProps) {
     return (
         <div className={`fst__side ${!isCtnDashVisible ? 'ctn__dash--hidden' : ''}`}>
             <div className="lst__side">
-                <LstSide isCtnDashVisible={isCtnDashVisible} onToggle={toggleCtnDash} />
+                <LstSide isCtnDashVisible={isCtnDashVisible} onToggle={onToggle} />
             </div>
             <div className={!isCtnDashVisible ? 'ctn__dash--collapsed' : ''}>
                 <CtnDash />

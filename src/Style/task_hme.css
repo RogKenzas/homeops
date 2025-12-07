@@ -1,0 +1,36 @@
+.task__ctn {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px 20px 20px;
+}
+
+.display__icn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.icn__btn {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    border-right: 1px solid #aaaaaa;
+    padding-right: 10px;
+}
+
+.state__sec {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    flex: 1;
+    gap: 20px;
+    padding: 0 20px;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.state__sec--expanded {
+    padding: 0 20px;
+    /* gap: 20px; */
+}

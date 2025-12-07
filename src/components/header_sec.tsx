@@ -8,9 +8,10 @@ import { BtnMng } from "./btn_mng";
 
 interface HeaderSecProps {
   icon: ReactNode;
+  isCtnDashVisible: boolean;
 }
 
-export const HeaderSec: React.FC<HeaderSecProps> = ({ icon }) => {
+export const HeaderSec: React.FC<HeaderSecProps> = ({ icon, isCtnDashVisible }) => {
   const route = useRoute();
 
   return (
@@ -26,7 +27,7 @@ export const HeaderSec: React.FC<HeaderSecProps> = ({ icon }) => {
       </div>
 
       <div className="input__sec">
-        <SearchBar/>
+        <SearchBar isCtnDashVisible={isCtnDashVisible} />
       </div>
 
       <div className="btn__card__sec">

@@ -5,7 +5,11 @@ import DashHme from './dash_hme';
 import PlanHme from './plan_hme';
 import TaskHme from './task_hme';
 
-export default function AppCtn() {
+interface AppCtnProps {
+    isCtnDashVisible: boolean;
+}
+
+export default function AppCtn({ isCtnDashVisible }: AppCtnProps) {
 
     const [route, setRoute] = useState<RouteName>(getRoute());
 
@@ -23,16 +27,16 @@ export default function AppCtn() {
     const renderPage = () => {
         switch (route) {
             case "task":
-                return <TaskHme/>; 
+                return <TaskHme isCtnDashVisible={isCtnDashVisible}/>; 
             case "plans":
-                return <PlanHme />;
+                return <PlanHme isCtnDashVisible={isCtnDashVisible} />;
             default:
-                return <DashHme />
+                return <DashHme isCtnDashVisible={isCtnDashVisible} />
         }
     };
 
     return (
-        <div className="ctn__app">
+        <div className={`ctn__app ${!isCtnDashVisible ? 'ctn__app--expanded' : ''}`}>
             <div className="ctn__main__app">
                 {renderPage()}
             </div>

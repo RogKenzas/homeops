@@ -6,6 +6,8 @@
     border-bottom: .5px solid #aaaa;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
+    gap: 15px;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .route {
@@ -15,6 +17,7 @@
     gap: 5px;
     color: #a0a0a0;
     font-size: 14px;
+    flex-shrink: 0;
 
     .route__titles, .route__icn:nth-last-child(2) {
         cursor: pointer;
@@ -26,4 +29,17 @@
     .route__titles:hover {
         text-decoration: underline;
     }
+}
+
+.input__sec {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+
+.btn__card__sec {
+    flex-shrink: 0;
 }
