@@ -1,0 +1,37 @@
+.ctn__bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+    border: 1px solid #aaaaaa;
+    width: 20rem;
+}
+
+.icn_search {
+    padding-left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icn__submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    color: #fff;
+    background-color: #aaaaaa;
+    border-radius: 50px;
+    margin-right: 5px;
+}
+
+#bar__search {
+    border: none;
+    background-color: transparent;
+    padding: 10px 10px 10px 5px;
+    width: 20rem;
+}
+
+#bar__search:focus {
+    outline: none;
+}

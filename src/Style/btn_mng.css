@@ -1,0 +1,12 @@
+.btn__mng {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    padding: 12px;
+    border-radius: 50px;
+    cursor: pointer;
+}

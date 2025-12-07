@@ -1,0 +1,17 @@
+.ctn__app {
+    flex: 1;
+    width: 100%;
+    padding: 20px 20px 0px 0px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    min-width: 0;
+}
+
+.ctn__main__app {
+    height: 50rem;
+    /* padding: 20px; */
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    background-color: rgb(255, 255, 255);
+    color: #000;
+    transition: all 0.3s ease;
+}

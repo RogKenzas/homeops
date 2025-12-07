@@ -1,0 +1,29 @@
+.header__sec {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: .5px solid #aaaa;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.route {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+    color: #a0a0a0;
+    font-size: 14px;
+
+    .route__titles, .route__icn:nth-last-child(2) {
+        cursor: pointer;
+        color: #00a4a4;
+        font-weight: bold;
+        transition: all 300 ease-in;
+    }
+
+    .route__titles:hover {
+        text-decoration: underline;
+    }
+}

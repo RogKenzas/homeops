@@ -1,0 +1,23 @@
+.fst__side {
+    display: flex;
+    width: 30em; 
+    height: 50rem;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.fst__side.ctn__dash--hidden {
+    width: 4em;
+}
+
+.fst__side > div:last-child {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.3s ease,
+                min-width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
