@@ -57,10 +57,12 @@
     border-right: 1px solid #aaaaaa;
     padding-right: 5px;
     padding-left: 1px;
+    cursor: pointer;
 }
 
 .icn__ellip {
     display: flex;
     justify-content: center;
+    cursor: pointer;
     align-items: center;
 }

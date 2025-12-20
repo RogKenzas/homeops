@@ -1,13 +1,14 @@
 import type { ReactNode } from "react"
 import "../Style/state_tsk.css"
 
-interface StateTskProps {
+export interface StateTskProps {
     iconSte: ReactNode
     label: string,
     nbTsk: number
     iconAdd: ReactNode
     iconEllip: ReactNode
-    isCtnDashVisible: boolean;
+    onclick?: () => void
+    isCtnDashVisible: boolean
 }
 
 const COLORS: Record<string, { bg: string; border: string }> = {
@@ -18,7 +19,7 @@ const COLORS: Record<string, { bg: string; border: string }> = {
 };
 
 
-export const StateTsk: React.FC<StateTskProps> = ({ label, iconSte, nbTsk, iconAdd, iconEllip, isCtnDashVisible }) => {
+export const StateTsk: React.FC<StateTskProps> = ({ label, iconSte, nbTsk, iconAdd, iconEllip, isCtnDashVisible, onclick }) => {
 
     const colors = COLORS[label] || COLORS["To do List"];
 
@@ -33,10 +34,10 @@ export const StateTsk: React.FC<StateTskProps> = ({ label, iconSte, nbTsk, iconA
             <div className="left__ste">
                 {iconSte}
                 <span>{label}</span>
-                {nbTsk !== undefined && <span>({nbTsk})</span>}
+                {nbTsk !== undefined && <span>({nbTsk ?? (<span>0</span>)})</span>}
             </div>
             <div className="right__ste">
-                <div className="icn__add">{iconAdd}</div>
+                <div className="icn__add" onClick={onclick}>{iconAdd}</div>
                 <div className="icn__ellip">{iconEllip}</div>
             </div>
         </div>

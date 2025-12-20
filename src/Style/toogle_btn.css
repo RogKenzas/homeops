@@ -1,0 +1,73 @@
+.toggleBtn {
+    width: 3.5em;
+    cursor: pointer;
+    position: relative;
+    color: #54d4ffea;
+    display: inline-block;
+}
+
+.toggleInput {
+    opacity: 0;
+    width: inherit;
+    aspect-ratio: 1;
+    cursor: pointer;
+}
+
+.toggleBtn svg {
+    position: absolute;
+    inset: 0;
+    width: inherit;
+    height: inherit;
+}
+
+.line {
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.toggleInput:checked+svg .line {
+    transform: scaleX(1);
+}
+
+.toggleInput:not(:checked)+svg .ballTrace {
+    animation: traceOff 0.3s ease forwards;
+}
+
+.toggleInput:not(:checked)+svg .ball {
+    animation: ballOn 0.4s ease forwards;
+}
+
+.toggleInput:checked+svg .ball,
+.toggleInput:checked+svg .ballTrace {
+    animation: ballOff 0.5s ease forwards;
+}
+
+@keyframes ballOn {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-8px);
+    }
+}
+
+@keyframes ballOff {
+    0% {
+        transform: translateX(-8px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes traceOff {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

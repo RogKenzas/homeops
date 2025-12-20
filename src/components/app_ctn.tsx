@@ -4,6 +4,7 @@ import { getRoute, type RouteName } from '../routers/route'
 import DashHme from './dash_hme';
 import PlanHme from './plan_hme';
 import TaskHme from './task_hme';
+import Modal from './modal';
 
 interface AppCtnProps {
     isCtnDashVisible: boolean;
@@ -27,7 +28,7 @@ export default function AppCtn({ isCtnDashVisible }: AppCtnProps) {
     const renderPage = () => {
         switch (route) {
             case "task":
-                return <TaskHme isCtnDashVisible={isCtnDashVisible}/>; 
+                return <TaskHme isCtnDashVisible={isCtnDashVisible} />;
             case "plans":
                 return <PlanHme isCtnDashVisible={isCtnDashVisible} />;
             default:

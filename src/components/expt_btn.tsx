@@ -5,8 +5,12 @@ interface ExptBtnProps {
   icon?: React.ReactNode;
   label?: string;
 }
+function log() {
+  console.log('Bouton de creation de Bouton');
+}
 
 export const ExptBtn: React.FC<ExptBtnProps> = ({ onClick, icon, label }) => {
+
 
   return (
     <div className="expt__btn" onClick={onClick}>
